@@ -25,7 +25,6 @@ import { useForm } from "react-hook-form";
 import DroppableComponent from "./Droppable";
 import ChapterModal from "./ChapterModal";
 import SectionModal from "./SectionModal";
-import { Label } from "@/components/ui/label";
 
 const CourseEditor = () => {
   const router = useRouter();
@@ -107,10 +106,11 @@ const CourseEditor = () => {
                   label={methods.watch("courseStatus") ? "Published" : "Draft"}
                   type="switch"
                   className="flex items-center space-x-2"
-                  labelClassName={`text-sm font-medium ${methods.watch("courseStatus")
+                  labelClassName={`text-sm font-medium ${
+                    methods.watch("courseStatus")
                       ? "text-green-500"
                       : "text-yellow-500"
-                    }`}
+                  }`}
                   inputClassName="data-[state=checked]:bg-green-500"
                 />
                 <Button
@@ -158,8 +158,6 @@ const CourseEditor = () => {
                       value: "Artificial Intelligence",
                       label: "Artificial Intelligence",
                     },
-                    { value: "web development", label: "Web Development" },
-                    { value: "english course", label: "English Course" }
                   ]}
                   initialValue={course?.category}
                 />
