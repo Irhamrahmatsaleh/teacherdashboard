@@ -92,9 +92,8 @@ const Landing = () => {
               fill
               priority={index === currentImage}
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              className={`landing__hero-image ${
-                index === currentImage ? "landing__hero-image--active" : ""
-              }`}
+              className={`landing__hero-image ${index === currentImage ? "landing__hero-image--active" : ""
+                }`}
             />
           ))}
         </div>
@@ -115,6 +114,7 @@ const Landing = () => {
 
         <div className="landing__tags">
           {[
+            "english course",
             "web development",
             "enterprise IT",
             "react nextjs",
